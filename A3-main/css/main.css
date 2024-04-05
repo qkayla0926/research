@@ -1,0 +1,658 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+#content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 50px; 
+  }
+
+body{
+    font-family: "Roboto", sans-serif;
+  background-size: 100% auto; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  padding-bottom: 80vh
+
+}
+
+
+#fix2{
+  position: fixed;
+  display: grid;
+  grid-column: 1/2;
+  grid-gap:10px;
+  justify-content: space-between; 
+  z-index: 8;
+  width: 180px; 
+  height: 10vh; 
+  background-color: white; 
+  margin: 20px;
+  border:2px solid black;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+
+#fix2:hover{
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'%3E%3Ccircle cx='16' cy='16' r='12' fill='black'/%3E%3C/svg%3E") 16 16, auto;
+  background-color: rgb(244, 206, 20);
+}
+
+
+
+
+/* .yellow-rectangles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+} */
+
+
+
+#research {
+  font-family: "termina", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 90px;
+  text-align: left;
+  grid-column: span 3;
+  color: rgb(3, 5, 4);
+  line-height: 10vh;
+  position: relative; 
+  z-index: 1;
+  }
+
+  
+  
+  .hover-font {
+    font-family: "termina", sans-serif;
+    transition: font-family 0.3s ease;
+    
+  }
+  
+  .hover-font:hover {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'%3E%3Ccircle cx='16' cy='16' r='12' fill='black'/%3E%3C/svg%3E") 16 16, auto;
+    font-family: "Neonderthaw", cursive;
+    font-weight: 400;
+    font-size: 70px;
+    font-style: normal;
+  }
+  
+h2 {
+    font-family: "termina", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 80px;
+    text-align: left;
+    grid-column: span 3;
+    opacity: 100%;
+    color: rgb(3, 5, 4);
+    position: relative; 
+    z-index: 1;
+  line-height: 10vh;
+  }
+
+ 
+  
+
+      .lecture{
+        font-family: "termina", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 70px;
+        text-align: left;
+        grid-column: span 3;
+        color:rgb(3, 5, 4);
+        display: inline; 
+
+
+      }
+
+     
+      
+  
+      
+      .lecture:hover {
+        font-weight: 800;
+        color: rgb(244, 206, 20); 
+        text-decoration:underline;
+        opacity: 100%;
+        cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'%3E%3Ccircle cx='16' cy='16' r='12' fill='black'/%3E%3C/svg%3E") 16 16, auto;
+
+
+
+      }
+
+    
+      .speakers {
+        position:relative;
+        grid-column: span 3;
+        ;
+
+      }
+
+      
+
+
+
+.name {
+  position: relative; 
+  transition: transform 0.3s ease;
+  backface-visibility: hidden;
+  font-family: "termina",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-right: 40px;
+    font-size: 100px;
+    text-align: right;
+    -webkit-text-stroke: 2px rgb(244, 206, 20);
+    color: transparent;
+    grid-column: 2/span1;
+    line-height:220px;
+}
+
+.name:hover {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'%3E%3Ccircle cx='16' cy='16' r='12' fill='black'/%3E%3C/svg%3E") 16 16, auto;
+color:rgb(244, 206, 20);
+font-weight: 600;
+transform: translateY(65px); 
+
+
+
+}
+
+#kuan{
+  line-height: 100px;
+}
+
+
+.event {
+  
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(12,1fr);
+  grid-gap: 20px;
+
+}
+
+
+
+.date{
+  grid-column: 2/span 2 ;
+  grid-row:3;
+  font-family: "Roboto", sans-serif;
+  font-weight: 1000;
+  font-size:24px;
+  color:transparent;
+  -webkit-text-stroke: 1px white;
+  z-index: 9;
+}
+
+.date-hover{
+  grid-column: 2/span 2 ;
+  grid-row:4;
+  font-family: "Roboto", sans-serif;
+  font-weight: 1000;
+  font-size:24px;
+  color:white;
+  z-index: 9;
+}
+
+
+
+.date-hover .hover-date {
+  display: none;
+}
+
+.date-hover:hover .date {
+  display: none;
+}
+
+.date-hover:hover .hover-date {
+  display: block;
+}
+
+.time-hover{
+  grid-column: 4/span 2 ;
+  grid-row:4;
+  font-family: "Roboto", sans-serif;
+  font-weight: 1000;
+  font-size:24px;
+  color:white;
+  z-index: 9;
+}
+
+.time{
+  grid-column: 4/span 2 ;
+  grid-row:4;
+  font-family: "Roboto", sans-serif;
+  font-weight: 1000;
+  font-size:24px;
+  color:transparent;
+  -webkit-text-stroke: 1px white;
+  z-index: 9;
+
+}
+
+.time-hover .hover-time {
+  display: none;
+}
+
+.time-hover:hover .time {
+  display: none;
+}
+
+.time-hover:hover .hover-time {
+  display: block;
+}
+
+
+.location-hover{
+  grid-column: 5/span 2 ;
+  grid-row:4;
+  text-align: right;
+  font-family: "Roboto", sans-serif;
+  font-weight: 1000;
+  font-size:24px;
+  color:white;
+  z-index: 4;
+
+}
+
+.location{
+  grid-column: 5/span 2 ;
+  grid-row:4;
+  font-family: "Roboto", sans-serif;
+  font-weight: 1000;
+  font-size:24px;
+  color:transparent;
+  -webkit-text-stroke: 1px white;
+  z-index: 9;
+  
+
+}
+
+
+.location-hover .hover-location {
+  display: none;
+}
+
+.location-hover:hover .location {
+  display: none;
+}
+
+.location-hover:hover .hover-location{
+  display: block;
+}
+
+
+.artist{
+  font-family: "termina",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 50px;
+  grid-column: 8/span 5;
+  grid-row:1;
+  margin-top: 70px;
+  text-align: left;
+
+}
+
+#anther_artist{
+  font-family: "termina",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 30px;
+  grid-column: 7/span 4;
+  grid-row:1;
+  margin-top: 70px;
+}
+
+#kuan_artist{
+  font-family: "termina",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 30px;
+  grid-column: 7/span 4;
+  grid-row:1;
+  margin-top: 70px;
+}
+
+#roon_artist{
+  font-family: "termina",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 50px;
+  grid-column: 7/span 4;
+  grid-row:1;
+  margin-top: 70px;
+}
+
+
+#seba_artist{
+  font-size:50px;
+  font-family: "termina",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  grid-column: 7/span 5;
+  grid-row:1;
+  margin-top: 70px;
+}
+
+.info{
+  text-indent: 50px;
+  grid-column: 7/span 5;
+  grid-row:2/span 1;
+  font-family: "Roboto", sans-serif;
+  font-weight:400;
+  line-height: 18px;
+  font-size:18px;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  padding:5px;
+  z-index: 4;
+  overflow: hidden;
+}
+
+#kuan_info{
+  grid-column: 7/span 5;
+  grid-row:2/span 3;
+
+  font-size:18px;
+}
+
+#roon_info{
+  grid-column: 7/span 5;
+  grid-row:2;
+
+  font-size:18px;
+}
+
+#seba_info{
+  grid-column: 7/span 5;
+  grid-row:2;
+  font-size:18px;
+  overflow: hidden;
+  padding: 0;
+  
+}
+
+.image{
+  grid-column: 2/span 4;
+  grid-row:2/span 2 ;
+  z-index:3;
+  
+
+}
+
+.image img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit:contain; /* 图片尺寸适应但不变形 */
+  align-items: left;
+}
+
+.external_links{
+  text-decoration: underline;
+  color:rgb(244, 206, 20)！imporant;
+  grid-row:5;
+margin-top: 20px;}
+
+/*加遮罩*/
+
+.cover{
+  position:fixed;
+  top:0;
+  background-color:black ;
+  color:rgb(244, 206, 20);
+  width:100vw;
+  height:100vh;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity 0.3s;
+  z-index:6;
+}
+
+.cover.hoveredOn{
+  opacity:10;
+  pointer-events:all;
+  
+}
+
+
+/* 小屏幕样式 */
+@media only screen and (max-width: 960px) {
+
+  .name{
+    font-size: 70px;
+  }
+  
+  .cover{
+    position:relative;
+    top:0;
+    background-color:black ;
+    color:rgb(244, 206, 20);
+    width:100%;
+    height:80vh;
+    z-index:6;
+    pointer-events:all;
+  
+  }
+  
+    .event {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 30vh 10vh 30vh;
+      grid-gap: 20px;
+    
+    }
+    
+  
+    .artist{
+      display: none;
+    }
+  
+    
+  
+    
+    .hover-date, .date, .date-hover, .time, .time-hover, .location, .location-hover {
+      margin-top: 20px;
+      grid-column: auto; /* 取消固定列 */
+      grid-row: 2; /* 取消固定行 */
+      text-align: left; /* 左对齐 */
+    }
+  
+  
+    .date-hover .hover-date{
+      display:flex;
+      margin-left: 20px;
+    }
+  
+  
+    .date{
+      display: none;
+    }
+    
+   
+  
+   
+  
+    .time{
+      display: none;
+    }
+    
+    .time-hover .hover-time {
+      margin-top: 20px;
+      margin-left: 50px;
+  
+      display: flex;
+    }
+  
+    .location{
+      display: none;
+    }
+    
+    .location-hover .hover-location {
+      margin-top: 20px;
+  
+      display: flex;
+    }
+    
+    
+    
+    
+  
+    .image{
+      grid-row:1;
+      grid-column: span 3;
+ 
+    margin-top: 30px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
+    }
+  
+   
+    
+    .image img{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit:contain; /* 图片尺寸适应但不变形 */
+      align-items: center;
+    }
+  
+    .info, #aether_info,#kuan_info, #roon_info, #seba_info {
+      text-indent: 50px;
+      grid-column: span 3;
+      grid-row:3;
+      font-family: "Roboto", sans-serif;
+      font-weight:400;
+      line-height: 18px;
+      font-size:18px;
+      /* background-color: rgba(255, 255, 255, 0.5); */
+      padding:5px;
+      z-index: 4;
+      overflow: hidden;
+      margin-top: 40px;
+    }
+  
+  }
+
+
+@media only screen and (max-width: 768px) {
+.cover{
+  position:relative;
+  top:0;
+  background-color:black ;
+  color:rgb(244, 206, 20);
+  width:100%;
+  height:80vh;
+  z-index:6;
+  pointer-events:all;
+
+}
+
+  .event {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10vh 30vh 30vh;
+    grid-gap: 20px;
+  
+  }
+  
+
+  .artist{
+    display: none;
+  }
+
+  
+
+  
+  .hover-date, .date, .date-hover, .time, .time-hover, .location, .location-hover {
+    margin-top: 20px;
+    grid-column: auto; /* 取消固定列 */
+    grid-row: 1; /* 取消固定行 */
+    text-align: left; /* 左对齐 */
+  }
+
+
+  .date-hover .hover-date{
+    display:flex;
+  }
+
+
+  .date{
+    display: none;
+  }
+  
+ 
+
+ 
+
+  .time{
+    display: none;
+  }
+  
+  .time-hover .hover-time {
+    margin-top: 20px;
+    margin-left: 50px;
+
+    display: flex;
+  }
+
+  .location{
+    display: none;
+  }
+  
+  .location-hover .hover-location {
+    margin-top: 20px;
+
+    display: flex;
+  }
+  
+  
+  
+  
+
+  .image{
+    grid-row:2;
+    grid-column: span 3;
+  }
+
+  .image{
+    grid-column: span 3;
+    grid-row:2 ;
+    z-index:3;
+    
+  
+  }
+  
+  .image img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit:contain; /* 图片尺寸适应但不变形 */
+    align-items: center;
+  }
+
+  .info, #aether_info,#kuan_info, #roon_info, #seba_info {
+    text-indent: 50px;
+    grid-column: span 3;
+    grid-row:3;
+    font-family: "Roboto", sans-serif;
+    font-weight:400;
+    line-height: 18px;
+    font-size:18px;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    padding:5px;
+    z-index: 4;
+    overflow: hidden;
+  }
+
+}
+
+  
